@@ -3,18 +3,91 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Zoo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #006400;
+            padding: 1em;
+            color: white;
+            text-align: center;
+        }
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            height: 300px;
+            margin-bottom: 2em;
+        }
+        .carousel img {
+            width: 100%;
+        }
+        .section {
+            padding: 2em;
+        }
+        .section:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+        .footer {
+            background-color: #006400;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1>Zoo - Accueil</h1>
+        <p>Menu Navigation</p>
+    </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>D:/arcadia/Arcadia/src/Controller/HomeController.php</code></li>
-        <li>Your template at <code>D:/arcadia/Arcadia/templates/home/index.html.twig</code></li>
-    </ul>
-</div>
+    <!-- Carousel -->
+    <div class="carousel">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+    </div>
+
+    <!-- Section: Habitats -->
+    <div class="section">
+        <h2>Présentation des Habitats</h2>
+        <p>Description des différents habitats du zoo...</p>
+    </div>
+
+    <!-- Section: Services -->
+    <div class="section">
+        <h2>Présentation des Services</h2>
+        <p>Description des services offerts par le zoo...</p>
+    </div>
+
+    <!-- Section: Animaux -->
+    <div class="section">
+        <h2>Quelques Animaux</h2>
+        <p>Description de quelques animaux du zoo...</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Horaires du Zoo : 9h00 - 18h00</p>
+        <p>Autres informations...</p>
+    </div>
+
+</body>
+</html>
+
 {% endblock %}
