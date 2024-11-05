@@ -8,13 +8,5 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>D:/arcadia/Arcadia/src/Controller/HabitatsController.php</code></li>
-        <li>Your template at <code>D:/arcadia/Arcadia/templates/habitats/index.html.twig</code></li>
-    </ul>
-</div>
+<h1>Nos Habitats</h1> <div class="habitats"> {% for habitat in habitats %} <div class="habitat"> <h2>{{ habitat.name }}</h2> <img src="{{ asset('images/' ~ habitat.image) }}" alt="{{ habitat.name }}"> <p>{{ habitat.description }}</p> </div> {% endfor %} </div>
 {% endblock %}
