@@ -79,6 +79,12 @@
     <div class="section">
         <h2>Quelques Animaux</h2>
         <p>Description de quelques animaux du zoo...</p>
+        {% for animal in animaux %} 
+        <div class="service"> 
+            <h2>{{ animal.prenom }}</h2> 
+            <p>{{ animal.etat }}</p> 
+        </div> 
+        {% endfor %}
     </div>
 
     <!-- Footer -->
