@@ -9,6 +9,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use App\Entity\Animal;
 use App\Entity\Habitat;
+use App\Entity\Service;
+
 
 class DashboardController extends AbstractDashboardController
 {
@@ -29,5 +31,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Animaux', 'fas fa-list', Animal::class);
         yield MenuItem::linkToCrud('Habitats', 'fas fa-list', Habitat::class);
+        yield MenuItem::linkToCrud('Services', 'fas fa-list', Service::class);
     }
 }
