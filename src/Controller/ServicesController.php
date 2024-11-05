@@ -12,8 +12,6 @@ class ServicesController extends AbstractController
     #[Route('/services', name: 'services')]
     public function index(): Response
     {
-        $services = [ ['name' => 'Visites Guidées', 'description' => 'Des visites guidées avec des experts du zoo.'], ['name' => 'Soins aux Animaux', 'description' => 'Découvrez comment nous prenons soin de nos animaux.'], ];
-
         return $this->render('services/index.html.twig', [
             'services' => $services,
         ]);

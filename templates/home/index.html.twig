@@ -66,13 +66,21 @@
     <!-- Section: Habitats -->
     <div class="section">
         <h2>Présentation des Habitats</h2>
-        <p>Description des différents habitats du zoo...</p>
+        {% for habitat in habitats %}
+        <h2>{{ habitat.nom }}</h2>
+        <p>{{ habitat.description }}</p>
+        {% endfor %}
     </div>
 
     <!-- Section: Services -->
     <div class="section">
         <h2>Présentation des Services</h2>
-        <p>Description des services offerts par le zoo...</p>
+         {% for service in services %} 
+        <div class="service"> 
+            <h2>{{ service.nom }}</h2> 
+            <p>{{ service.description }}</p> 
+        </div> 
+        {% endfor %}
     </div>
 
     <!-- Section: Animaux -->
