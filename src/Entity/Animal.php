@@ -19,6 +19,9 @@ class Animal
     #[ORM\Column(length: 50)]
     private ?string $etat = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $Image = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -44,6 +47,18 @@ class Animal
     public function setEtat(string $etat): static
     {
         $this->etat = $etat;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->Image;
+    }
+
+    public function setImage(?string $Image): static
+    {
+        $this->Image = $Image;
 
         return $this;
     }
