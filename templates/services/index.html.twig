@@ -8,5 +8,5 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<h1>Nos Services</h1> <div class="services"> {% for service in services %} <div class="service"> <h2>{{ service.name }}</h2> <p>{{ service.description }}</p> </div> {% endfor %} </div>
+<h1>Nos Services</h1> <div class="services"> {% for service in services %} <div class="service"> <h2>{{ service.nom }}</h2> <p>{{ service.description }}</p> </div> {% endfor %} </div>
 {% endblock %}

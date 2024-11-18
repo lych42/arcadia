@@ -10,8 +10,10 @@ use App\Repository\ServiceRepository;
 class ServicesController extends AbstractController
 {
     #[Route('/services', name: 'services')]
-    public function index(): Response
+    public function index(ServiceRepository $serviceRepository): Response
     {
+        $services = $serviceRepository->findAll();
+
         return $this->render('services/index.html.twig', [
             'services' => $services,
         ]);
