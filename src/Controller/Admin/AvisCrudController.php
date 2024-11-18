@@ -22,7 +22,9 @@ class AvisCrudController extends AbstractCrudController
             IdField::new('id')->hideOnForm(),
             TextField::new('pseudo'),
             TextEditorField::new('commentaire'),
-            BooleanField::new('isVisible')
+            BooleanField::new('isVisible')->setFormTypeOptions([
+                'mapped' => false,
+            ])
         ];
     }
 }

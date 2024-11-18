@@ -20,7 +20,7 @@ class Avis
     private ?string $commentaire = null;
 
     #[ORM\Column]
-    private ?bool $isVisible = null;
+    private ?bool $isVisible = false;
 
     public function getId(): ?int
     {
@@ -56,7 +56,7 @@ class Avis
         return $this->isVisible;
     }
 
-    public function setVisible(bool $isVisible): static
+    public function setVisible(bool $isVisible): self
     {
         $this->isVisible = $isVisible;
 
