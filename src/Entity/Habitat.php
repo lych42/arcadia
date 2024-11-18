@@ -22,6 +22,9 @@ class Habitat
     #[ORM\Column(length: 50, nullable: true)]
     private ?string $commentaire_habitat = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $image = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -59,6 +62,18 @@ class Habitat
     public function setCommentaireHabitat(?string $commentaire_habitat): static
     {
         $this->commentaire_habitat = $commentaire_habitat;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(?string $image): static
+    {
+        $this->image = $image;
 
         return $this;
     }

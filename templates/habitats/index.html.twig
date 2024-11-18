@@ -1,17 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HabitatsController!{% endblock %}
+{% block title %}Habitats{% endblock %}
 
 {% block body %}
 <style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.habitats { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+} 
+.habitat { 
+    border: 1px solid #ccc; padding: 20px; border-radius: 10px; background-color: #f9f9f9; 
+} 
+.habitat h2 { 
+    font-size: 1.5em; color: #333; 
+} 
+.habitat p { 
+    font-size: 1em; color: #666; 
+} 
+.habitat:hover { 
+    border-color: #333; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+} 
+.habitat img { 
+    max-width: 100%; height: auto; margin-bottom: 10px; border-radius: 10px
+};
 </style>
 
-<h1>Nos Habitats</h1> 
+<h1 class="title">Habitats du Zoo</h1> 
 <div class="habitats"> 
-
-<div class="habitat"> 
-
+{% for habitat in habitats %} 
+    <div class="habitat"> 
+        <h2>{{ habitat.nom }}</h2> 
+        <p>{{ habitat.description }}</p> 
+    </div> 
+{% endfor %} 
 </div>
+
 {% endblock %}
