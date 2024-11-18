@@ -31,9 +31,7 @@
         .carousel img {
             width: 100%;
         }
-        .section {
-            padding: 2em;
-        }
+        .section { margin-top: 40px; text-align: center; /* Centrer le titre */ }
         .section:nth-child(even) {
             background-color: #f9f9f9;
         }
@@ -46,6 +44,17 @@
             text-align: center;
             padding: 1em;
         }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }       
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ccc;    
+        } 
+        .habitats-grid { display: grid; grid-template-columns: repeat(2, 1fr); /* Deux colonnes */ grid-template-rows: repeat(2, 1fr); /* Deux rangées */ gap: 20px; max-width: 800px; margin: 0 auto; /* Centrer la grille */ } .habitat { display: flex; align-items: center; justify-content: center; padding: 20px; border: 1px solid #ccc; border-radius: 10px; } .habitat-content { text-align: left; }
     </style>
 </head>
 <body>
@@ -69,13 +78,20 @@
         </div>
     </div>
 
+
     <!-- Section: Habitats -->
-    <div class="section">
+    <div class="section"> 
         <h2>Présentation des Habitats</h2>
-        {% for habitat in habitats %}
-        <h2>{{ habitat.nom }}</h2>
-        <p>{{ habitat.description }}</p>
-        {% endfor %}
+        <div class="habitats-grid"> 
+            {% for habitat in habitats %} 
+            <div class="habitat"> 
+                <div class="habitat-content"> 
+                    <h3>{{ habitat.nom }}</h3> 
+                    <p>{{ habitat.description }}</p> 
+                </div> 
+            </div>
+    {% endfor %} 
+    </div>
     </div>
 
     <!-- Section: Services -->
