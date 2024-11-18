@@ -10,6 +10,7 @@ use Symfony\Component\Routing\Attribute\Route;
 use App\Entity\Animal;
 use App\Entity\Habitat;
 use App\Entity\Service;
+use App\Entity\Avis;
 
 
 class DashboardController extends AbstractDashboardController
@@ -32,5 +33,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Animaux', 'fas fa-list', Animal::class);
         yield MenuItem::linkToCrud('Habitats', 'fas fa-list', Habitat::class);
         yield MenuItem::linkToCrud('Services', 'fas fa-list', Service::class);
+        yield MenuItem::linkToCrud('Avis', 'fas fa-list', Avis::class);
     }
 }

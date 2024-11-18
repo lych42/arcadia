@@ -108,13 +108,17 @@
 
 
     <!-- Section: Avis -->
-   <div class="section"> <h2>Les Avis de Nos Visiteurs</h2> 
-   <div class="reviews-grid"> 
-   <div class="review"> 
+   <div class="section"> 
+   <h2>Les Avis de Nos Visiteurs</h2> 
+   <div class="reviews-grid"> {% for avis in avis %} 
+   <div class="review">
    <h3>{{ avis.pseudo }}</h3> 
-   <p>"{{ avis.commentaire }}"</p> 
+   <p>"{{ avis.commentaire }}"</p>
    </div> 
-   </div> </div>,
+   {% endfor %} 
+   </div> 
+   </div>
+   
 
 
     <!-- Footer -->
