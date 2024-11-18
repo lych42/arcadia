@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Animal;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
@@ -24,7 +25,8 @@ class AnimalCrudController extends AbstractCrudController
             IdField::new('id')->hideOnForm(),
             TextField::new('prenom'),
             TextField::new('etat'),
-            ImageField::new('image') ->setBasePath('uploads/images') 
+            AssociationField::new('habitat')->setRequired(true),
+            ImageField::new('image') ->setBasePath('public/images') 
             ->setUploadDir('public/images') 
             ->setUploadedFileNamePattern('[randomhash].[extension]') 
             ->setRequired(false),

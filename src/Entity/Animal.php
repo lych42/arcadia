@@ -22,6 +22,10 @@ class Animal
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $Image = null;
 
+    #[ORM\ManyToOne(inversedBy: 'animaux')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Habitat $habitat = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -59,6 +63,18 @@ class Animal
     public function setImage(?string $Image): static
     {
         $this->Image = $Image;
+
+        return $this;
+    }
+
+    public function getHabitat(): ?Habitat
+    {
+        return $this->habitat;
+    }
+
+    public function setHabitat(?Habitat $habitat): static
+    {
+        $this->habitat = $habitat;
 
         return $this;
     }

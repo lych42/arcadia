@@ -35,6 +35,11 @@
 {% for habitat in habitats %} 
     <div class="habitat"> 
         <h2>{{ habitat.nom }}</h2> 
+        {% if habitat.image %} 
+        <div class="habitat-image"> 
+        <img src="{{ asset('/images/' ~ habitat.image) }}" alt="{{ habitat.nom }}"> 
+        </div> {% endif %}
+
         <p>{{ habitat.description }}</p> 
     </div> 
 {% endfor %} 

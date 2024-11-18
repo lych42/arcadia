@@ -5,8 +5,9 @@ namespace App\Controller\Admin;
 use App\Entity\Habitat;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 
 class HabitatCrudController extends AbstractCrudController
 {
@@ -20,8 +21,13 @@ class HabitatCrudController extends AbstractCrudController
     {
         return [
             TextField::new('nom'),
-            TextField::new('description'),
-            TextField::new('commentaire_habitat')
+            TextareaField::new('description'),
+            TextField::new('commentaire_habitat'),
+            ImageField::new('image') 
+            ->setBasePath('public/images') 
+            ->setUploadDir('public/images') 
+            ->setUploadedFileNamePattern('[randomhash].[extension]') 
+            ->setRequired(false),
         ];
     }
 }
