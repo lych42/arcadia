@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Bienvenue chez Arcadia{% endblock %}
 
 {% block body %}
 <!DOCTYPE html>
@@ -58,9 +58,15 @@
 
     <!-- Carousel -->
     <div class="carousel">
-        <img src="image1.jpg" alt="Image 1">
-        <img src="image2.jpg" alt="Image 2">
-        <img src="image3.jpg" alt="Image 3">
+        <div class="image-container"> 
+            <img src="{{ asset('images/croco.png') }}" alt="Description de l'image"> 
+        </div>
+        <div class="image-container"> 
+            <img src="{{ asset('images/dragon.png') }}" alt="Description de l'image"> 
+        </div>
+        <div class="image-container"> 
+            <img src="{{ asset('images/otarie.png') }}" alt="Description de l'image"> 
+        </div>
     </div>
 
     <!-- Section: Habitats -->
