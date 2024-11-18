@@ -10,17 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - Zoo</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar {
-            background-color: #006400;
-            padding: 1em;
-            color: white;
-            text-align: center;
-        }
         .carousel {
             display: flex;
             overflow: hidden;
@@ -38,12 +27,6 @@
         .section h2 {
             margin-top: 0;
         }
-        .footer {
-            background-color: #006400;
-            color: white;
-            text-align: center;
-            padding: 1em;
-        }
         .image-container {
             text-align: center;
             margin-top: 20px;
@@ -58,16 +41,9 @@
         .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); /* Deux colonnes */ grid-template-rows: repeat(2, 1fr); /* Deux rangées */ gap: 20px; max-width: 800px; margin: 0 auto; /* Centrer la grille */ } .service { display: flex; align-items: center; justify-content: center; padding: 20px; border: 1px solid #ccc; border-radius: 10px; } .service-content { text-align: left; }
         .animal { display: flex; align-items: center; margin-bottom: 20px; } .animal-left .animal-content { order: 1; margin-right: 20px; } .animal-right .animal-content { order: 2; margin-left: 20px; } .animal-content { max-width: 50%; border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; }
         .animals-grid { display: grid; grid-template-columns: repeat(2, 1fr); /* Deux colonnes */ grid-template-rows: auto; /* Plusieurs rangées selon le nombre d'animaux */ gap: 20px; max-width: 800px; margin: 0 auto; /* Centrer la grille */ } .animal { display: flex; flex-direction: column; /* Alignement vertical */ align-items: center; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9; } .animal-content { text-align: center; /* Centrer le contenu */ } .animal-image img { max-width: 100%; height: auto; border: 2px solid #ccc; border-radius: 5px; margin-bottom: 10px; }
-        .footer { display: flex; justify-content: space-around; padding: 20px; background-color: #333; color: #fff; } .footer-column { flex: 1; padding: 10px; } .footer-column h4 { margin-bottom: 10px; color: #fff; } .footer-column ul { list-style-type: none; padding: 0; } .footer-column ul li { margin-bottom: 5px; } .footer-column ul li a { color: #fff; text-decoration: none; } .footer-column ul li a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
-
-    <!-- Navbar -->
-    <div class="navbar">
-        <h1>Zoo - Accueil</h1>
-        <p>Menu Navigation</p>
-    </div>
 
     <!-- Carousel -->
     <div class="carousel">
@@ -122,28 +98,7 @@
    
 
 
-    <!-- Footer -->
-    <footer class="footer"> 
-    <div class="footer-column"> 
-    <h4>Horaires</h4> 
-    <p>Lundi - Vendredi: 9h - 18h</p> 
-    <p>Samedi: 10h - 17h</p> 
-    <p>Dimanche: Fermé</p> 
-    </div> 
-    <div class="footer-column"> 
-    <h4>Habitats</h4> 
-    <ul> 
-        <li><a href="{{ path('habitats') }}">Tous les Habitats</a>
-        </li> <!-- Ajouter d'autres liens si nécessaire --> 
-    </ul> 
-    </div> 
-    <div class="footer-column"> 
-    <h4>Services</h4> 
-    <ul> 
-        <li><a href="{{ path('services') }}">Nos Services</a>
-        </li> <!-- Ajouter d'autres liens si nécessaire --> 
-    </ul> 
-    </div> 
+    
 
 </body>
 </html>
