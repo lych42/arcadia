@@ -38,9 +38,19 @@
         {% if habitat.image %} 
         <div class="habitat-image"> 
         <img src="{{ asset('/images/' ~ habitat.image) }}" alt="{{ habitat.nom }}"> 
-        </div> {% endif %}
-
+        </div> 
+        {% endif %}
         <p>{{ habitat.description }}</p> 
+        {% if habitat.animaux is not empty %}
+        <h3>Présent dans cet habitat :</h3>
+        <ul> 
+        {% for animal in habitat.animaux %} 
+        <li>{{ animal.prenom }}</li> 
+        {% endfor %} 
+        </ul>
+        {% else %} 
+        <p>Pas d'animaux ici pour le moment</p>
+        {% endif %}
     </div> 
 {% endfor %} 
 </div>

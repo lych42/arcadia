@@ -26,6 +26,7 @@ class AnimalCrudController extends AbstractCrudController
             TextField::new('prenom'),
             TextField::new('etat'),
             AssociationField::new('habitat')->setRequired(true),
+            AssociationField::new('race')->setRequired(true),
             ImageField::new('image') ->setBasePath('public/images') 
             ->setUploadDir('public/images') 
             ->setUploadedFileNamePattern('[randomhash].[extension]') 
